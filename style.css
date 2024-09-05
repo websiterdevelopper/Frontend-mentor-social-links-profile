@@ -1,0 +1,104 @@
+/* Font */
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+/* Variables */
+:root {
+  --hover: hsl(75, 94%, 57%);
+  --socials-bg: hsl(0, 0%, 20%);
+  --card-bg: hsl(0, 0%, 12%);
+  --body-bg: hsl(0, 0%, 8%);
+}
+
+/* General Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bg);
+}
+
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/* =============================== Main CSS =============================== */
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  width: 30%;
+  margin: 1.5rem auto;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media (max-width: 425px) {
+  .card {
+    width: 75%;
+  }
+}
+
+/* ============= Header ============= */
+.card img {
+  display: block;
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 1rem auto;
+}
+
+.card .header-title {
+  margin: 1.5rem 0;
+}
+
+.card h5 {
+  color: var(--hover);
+  margin-top: 10px;
+  font-size: 0.75rem;
+}
+
+/* ============= Main Body ============= */
+
+.card .socials {
+  margin: 1.5rem 0;
+}
+
+.card .socials ul li {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--socials-bg);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.card .socials ul li:hover {
+  background-color: var(--hover);
+  color: black;
+}
